@@ -1,5 +1,20 @@
-#include "ZorenGE.h"
+#include <ZorenGE.h>
 
-void main() {
-	ZorenGE::Print();
+class Sandbox : public ZorenGE::Application {
+	public:
+
+		Sandbox() {
+
+		}
+
+		~Sandbox() {
+
+		}
+
+};
+
+int main() {
+	Sandbox* sandbox = new Sandbox();
+	sandbox->Run();
+	delete sandbox;
 }
