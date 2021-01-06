@@ -1,20 +1,15 @@
 #include <ZorenGE.h>
 
 class Sandbox : public ZorenGE::Application {
-	public:
+public:
 
-		Sandbox() {
+	Sandbox() {
+	}
 
-		}
-
-		~Sandbox() {
-
-		}
-
+	~Sandbox() {
+	}
 };
 
-int main() {
-	Sandbox* sandbox = new Sandbox();
-	sandbox->Run();
-	delete sandbox;
+ZorenGE::Application* ZorenGE::CreateApplication() {
+	return new Sandbox();
 }
